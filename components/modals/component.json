@@ -1,0 +1,8 @@
+//
+// Component
+// ----------------------------------------------
+
+{
+  "component": "modal",
+  "modifiers": ["modal-large", "modal-wide"],
+}

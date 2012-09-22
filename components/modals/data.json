@@ -1,0 +1,14 @@
+//
+// Data
+// ----------------------------------------
+
+{
+  "component": "modal",
+  "title": "", // default data for footer component
+  "defaults": {
+    "data": "data!"
+  },
+  "options": {
+    "data": "data!"
+  }
+}
