@@ -84,6 +84,196 @@ hr.soften {
 }
 
 
+
+/* Jumbotrons
+-------------------------------------------------- */
+
+/* Base class
+------------------------- */
+.jumbotron {
+  position: relative;
+  padding: 30px 0 40px;
+  text-align: center;
+  background: #fcfcfc; 
+}
+.jumbotron h1 {
+  font-weight: bold;
+  color: @themePrimaryColor;
+  line-height: 37px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+}
+.jumbotron p {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+
+/* Link styles (used on .masthead-links as well) */
+.jumbotron a {
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+.jumbotron .breadcrumb > li > a {
+  color: @themePrimaryColor;
+}
+.jumbotron a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,.25);
+}
+
+/* Download button */
+.masthead .btn-download {
+  padding: 19px 24px;
+  font-size: 24px;
+  font-weight: 200;
+  color: @white; /* redeclare to override the `.jumbotron a` */
+  text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+  border: 0;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+  -webkit-transition: none;
+     -moz-transition: none;
+          transition: none;
+}
+.masthead .btn-download:hover {
+  color: @white; /* redeclare to override the `.jumbotron a` */
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+     -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,.1), 0 1px 5px rgba(0,0,0,.25);
+}
+.masthead .btn-download:active {
+  color: @white; /* redeclare to override the `.jumbotron a` */
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+     -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+          box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+}
+
+
+/* Masthead (docs home)
+------------------------- */
+.masthead {
+  padding: 70px 0 80px;
+  margin-bottom: (@baseLineHeight * 2);
+  color: #fff;
+  text-shadow: none;
+  .clearfix();
+}
+.masthead h1 {
+  font-weight: normal;
+  font-size: 80px;
+  margin-top: 90px;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+.masthead p {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.25;
+}
+
+/* Textual links in masthead */
+.masthead-links {
+  margin: 0;
+  list-style: none;
+}
+.masthead-links li {
+  font-size: @baseFontSize;
+  display: inline;
+  padding: 0 10px;
+  color: rgba(255,255,255,.4);
+}
+
+/* Social proof buttons from GitHub & Twitter */
+.bs-docs-social {
+  padding: 15px 0;
+  text-align: center;
+  background-color: #f5f5f5;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Quick links on Home */
+.bs-docs-social-buttons {
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.bs-docs-social-buttons li {
+  display: inline-block;
+  padding: 5px 8px;
+  line-height: 1;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* Subhead (other pages)
+------------------------- */
+.subhead {
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.subhead h1 {
+  font-size: 50px;
+  font-weight: 300;
+  color: darken(@themePrimaryColor, 5%);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.subhead p {
+  color: lighten(@themePrimaryColor, 30%);
+  margin-bottom: 20px;
+}
+.subhead .navbar {
+  display: none;
+}
+
+
+
+/* Marketing section of Overview
+-------------------------------------------------- */
+
+.marketing {
+  text-align: center;
+  color: #5a5a5a;
+}
+.marketing h1 {
+  margin: 60px 0 10px;
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.marketing h2 {
+  font-weight: 200;
+  margin-bottom: 5px;
+}
+.marketing p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.marketing .marketing-byline {
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 25px;
+  color: #999;
+}
+.marketing img {
+  display: block;
+  margin: 0 auto 30px;
+}
+
+
 /* Special grid styles
 -------------------------------------------------- */
 
@@ -525,11 +715,12 @@ form.bs-docs-example {
   .box-shadow(0 1px 2px rgba(0,0,0,.065));
 }
 .bs-docs-sidenav > li > a {
+  font-weight: normal;
   display: block;
   *width: 190px;
   margin: 0 0 -1px;
   padding: 8px 14px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
 }
 .bs-docs-sidenav > .active > a {
   font-weight: bold;
