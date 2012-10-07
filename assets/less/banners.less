@@ -37,20 +37,15 @@ body.banner-padding {
   padding-top: 90px;
 }
 
-.banner + .hero-unit {
-  margin-top: @bannerHeight;
-}
-
-
 
 // Alternate styles
 // ----------------
 .system-banner {
   color: @white;
   text-shadow: 0 1px 0 rgba(0,0,0,.5);
-  // background-color: @themeSecondaryColor;
+  // background-color: @themeSpinColor;
   background-color: @gray;
-  // border-color:  darken(@themeSecondaryColor, 10%);
+  // border-color:  darken(@themeSpinColor, 10%);
   border-color: @grayDark;
 }
 .banner-welcome {
@@ -108,19 +103,17 @@ body.banner-padding {
 
 // Move navbar down if another banner is present
 .banner + .banner,
-.banner + .navbar-fixed-top,
-.banner + script + .navbar-fixed-top { // account for when navbar is pulled in with ajax
-  margin-top: 50px;
+.banner ~ .navbar-fixed-top,
+.banner ~ .navbar-fixed-top ~ .jumbotron { 
+  margin-top: (@bannerHeight + 3px);
 }
 .banner + .banner + .banner,
-.banner + .banner + .navbar-fixed-top,
-.banner + .banner + script + .navbar-fixed-top { // account for when navbar is pulled in with ajax
-  margin-top: 100px;
-  + .nav-drawer {
-    margin-top: 50px;
-  }
+.banner + .banner ~ .navbar-fixed-top { 
+  margin-top: ((@bannerHeight + 3px) * 2);
 }
-
+.banner + .hero-unit {
+  margin-top: (@bannerHeight / 2); // add just a little space above hero-unit when banner is present
+}
 
 
 // Components
@@ -162,18 +155,3 @@ body.banner-padding {
   font-weight: bold;
 }
 
-
-// Master-Details
-// ----------------------------------------
-
-// adjust padding for banners inside records
-.record-banner {
-  padding: 6px 15px;
-  border-bottom: 1px solid #EEE0B0;
-  margin-bottom: @baseLineHeight / 2;
-}
-.data .banner {
-  .container {
-    width: auto;
-  }
-}
