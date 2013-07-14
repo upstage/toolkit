@@ -1,15 +1,7 @@
 # Numerous always-ignore extensions
-*.diff
-*.err
-*.orig
 *.log
-*.rej
-*.swo
-*.swp
 *.zip
-*.vi
-*~
-*.sass-cache
+*.rar
 
 # OS or Editor folders
 .DS_Store
@@ -21,8 +13,8 @@ Thumbs.db
 .tmproj
 *.esproj
 nbproject
-*.sublime-project
-*.sublime-workspace
+*.sublime-*
+
 
 # Komodo
 *.komodoproject
